@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/FinalProjectCOM230/floor1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Morgan Library and Museum</title>
+  <link rel="stylesheet" href="./Morgan Library and Museum_files/styles.css">
+</head>
+<body data-new-gr-c-s-check-loaded="14.1088.0" data-gr-ext-installed="">
+  <header>
+    <h1>Morgan Library and Museum</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="http://127.0.0.1:5500/FinalProjectCOM230/index.html">Home</a></li>
+      <li><a href="http://127.0.0.1:5500/FinalProjectCOM230/floor1.html">Floor 1 (Enterance Level)</a></li>
+      <li><a href="http://127.0.0.1:5500/FinalProjectCOM230/floor2.html">Floor 2</a></li>
+    </ul>
+  </nav>
+  
+      <button id="toggleFirstItem">Hide First Item</button> 
+      <button id="toggleSecondItem">Hide Second Item</button> 
+      <button id="toggleThirdItem">Hide Third Item</button>
+    
+      <div id="firstItem" style="display: block;">
+
+        <h3>Artwork 1</h3>
+        <img src="./Morgan Library and Museum_files/france.jpg">
+        <button id="toggleDirectionsItem1">Click for Directions</button>
+
+        <div id="directionsFirstItem">
+          <h4>Directions to Artwork 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+        <script>
+          const targetDivDirectionsFirstItem = document.getElementById("directionsFirstItem"); 
+          const btnFirstItemDirections = document.getElementById("toggleDirectionsFirstItem");
+       
+          btnFirstItemDirections.onclick = function () {
+            if (targetDivDirectionsFirstItem.style.display !== "none") {
+              targetDivDirectionsFirstItem.style.display = "none";
+            } else {
+              targetDivDirectionsFirstItem.style.display = "block";
+            }
+          }
+       </script>
+
+
+      </div>
+      <div id="secondItem" style="display: none;">This is the SECOND Item</div>
+      <div id="thirdItem" style="display: none;">This is the THIRD Item</div>
+
+    
+      <script>
+        const targetDivFirstItem = document.getElementById("firstItem");
+        const targetDivThirdItem = document.getElementById("thirdItem");
+        const targetDivSecondItem = document.getElementById("secondItem");
+
+
+        const btnFirstItem = document.getElementById("toggleFirstItem");
+        const btnSecondItem = document.getElementById("toggleSecondItem");
+        const btnThirdItem = document.getElementById("toggleThirdItem");
+
+        btnFirstItem.onclick = function () {
+          if (targetDivFirstItem.style.display !== "none") {
+            targetDivFirstItem.style.display = "none";
+
+            targetDivSecondItem.style.display = "block"
+            targetDivThirdItem.style.display = "block"
+          } else {
+            targetDivFirstItem.style.display = "block";
+            targetDivSecondItem.style.display = "none";
+            targetDivThirdItem.style.display = "none";
+          }
+        };
+
+        btnSecondItem.onclick = function () {
+          if (targetDivSecondItem.style.display !== "none") {
+            targetDivSecondItem.style.display = "none";
+
+            targetDivFirstItem.style.display = "block";
+            targetDivThirdItem.style.display = "block";
+          } else {
+            targetDivSecondItem.style.display = "block";
+            targetDivFirstItem.style.display = "none";
+            targetDivThirdItem.style.display = "none";
+
+          }
+        };        
+        
+        btnThirdItem.onclick = function () {
+          if (targetDivThirdItem.style.display !== "none") {
+            targetDivThirdItem.style.display = "none";
+
+            targetDivFirstItem.style.display = "block"
+            targetDivSecondItem.style.display = "block"
+
+          } else {
+            targetDivThirdItem.style.display = "block";
+            targetDivFirstItem.style.display = "none";
+            targetDivSecondItem.style.display = "none";
+          }
+        };
+      </script>
+
+
+
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+  <footer>
+    <p>Copyright Morgan Library and Museum</p>
+  </footer>
+<!-- Code inject--></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

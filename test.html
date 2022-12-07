@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Morgan Library and Museum</title>
+  </head>
+  <body>
+    <script>import { itemsData, lowerLevelHTML, floor1HTML, floor2HTML } from './museum-items-display';</script>
+    <h1>Morgan Library and Museum</h1>
+    <h2>Lower Level</h2>
+    <ul id="lower-level-list">
+      <!-- HTML code for the items on the lower level will be inserted here -->
+      <script>
+        // Insert the HTML code into the appropriate elements in the page
+          const lowerLevelList = document.querySelector('#lower-level-list');
+          lowerLevelList.innerHTML = lowerLevelHTML.join('');
+
+          // Loop through the items on the lower level
+          for (const item of lowerLevelItems) {
+            // Get the element for the current item
+            const itemElement = document.querySelector(`#item-${item.id}`);
+
+            // Attach an event listener to the item element
+            itemElement.addEventListener('click', () => {
+              // When the user clicks on the item, do something with the item data
+              // For example, display more information about the item
+              const itemInfo = `
+                <h3>${item.name}</h3>
+                <p>Located in ${item.location}</p>
+              `;
+              const itemInfoElement = document.querySelector('#item-info');
+              itemInfoElement.innerHTML = itemInfo;
+            });
+          }
+      </script>
+    </ul>
+    <h2>Floor 1</h2>
+    <ul id="floor-1-list">
+      <!-- HTML code for the items on floor 1 will be inserted here -->
+    </ul>
+    <h2>Floor 2</h2>
+    <ul id="floor-2-list">
+      <!-- HTML code for the items on floor 2 will be inserted here -->
+    </ul>
+
+    <!-- Include the JavaScript file that uses the import statement -->
+    <script src="./museum-items-display.js"></script>
+
+    
+  </body>
+</html>
