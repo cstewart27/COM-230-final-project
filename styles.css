@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
     background-color: #f2f2f2;
     margin: 0 auto;
-    width: 800px; /* This sets the width of the website's content area to 1200 pixels */
+    width: 800px; /* This sets the width of the website's content area to 800 pixels */
     padding: 0;
   }
   
@@ -32,6 +32,14 @@ body {
   nav li {
     display: inline-block;
     margin-right: 20px;
+  }
+
+  nav li:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+    padding: 8px;
+    border-radius: 10px;
+    background-color: rgb(153, 153, 153);
   }
   
   nav a {
