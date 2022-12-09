@@ -4,6 +4,7 @@
 <head>
   <title>Morgan Library and Museum</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
 </head>
 <body>
   <header>
@@ -27,7 +28,7 @@
       <div id="firstItem" hidden style="display: block" class="right-move">
 
         <h3>The North Room</h3>
-        <img src="pic4.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic4.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>During the interior restoration of J. Pierpont Morgan’s Library in 2010, the <br> Room of the building was converted into a gallery designed to show a wide <br>selection of Morgan's collection of antiquities, featuring ancient Western <br>Asian seals and tablets, Greek and Roman objects acquired by Morgan, <br>and the Thaw Collection of early medieval objects of personal adornment. <br>Four Ancient Western Asian clay tablets, containing text written in cuneiform, <br>including the earliest known flood narrative, are also on display.The Thaw <br>Collection of objects created in Europe, Central Asia, and the Middle East <br>between 300 and 1,000 A.D. is shown in its entirety for the first time. </p>        
         <button id="toggleDirectionsItem1" style="margin-bottom: 21px;" class = "button-27">Click for Directions</button>
@@ -39,20 +40,11 @@
             <li>You will find the exhibit on the backwall towards the far left side.</li>
           </ol>              
           <h5>Video Directions</h5>
-          <video src="movie4.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie4.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsFirstItem = document.getElementById("directionsItem1"); 
-          const btnFirstItemDirections = document.getElementById("toggleDirectionsItem1");
-       
-          btnFirstItemDirections.onclick = function () {
-            if (targetDivDirectionsFirstItem.style.display !== "none") {
-              targetDivDirectionsFirstItem.style.display = "none";
-            } else {
-              targetDivDirectionsFirstItem.style.display = "block";
-            }
-          };
-       </script>
+          exhibit1();
+        </script>
 
 
       </div>
@@ -60,7 +52,7 @@
       
       <div id="secondItem" hidden style="display:none" class="right-move">
         <h3>She Who Wrote: Enheduanna and Women of Mesopotamia</h3>
-        <img src="pic5.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic5.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>She Who Wrote: Enheduanna and Women of Mesopotamia, ca. 3400-2000 B.C. brings <br> together for the first time a comprehensive selection of artworks that <br>capture rich and shifting expressions of women’s lives in ancient Mesopotamia <br>during the 3rd millennium B.C. These works bear testament to women’s <br>roles in religious contexts as goddesses, priestesses, and worshippers <br>as well as in social, economic and political spheres as mothers, workers, and rulers.</p>        
         <button id="toggleDirectionsItem2" style="margin-bottom: 21px;" class = "button-27">Click for Directions</button>
@@ -72,20 +64,11 @@
             <li>You will find the exhibit on the backwall towards the far right side.</li>
           </ol>          
           <h5>Video Directions</h5>
-          <video src="movie5.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie5.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsSecondItem = document.getElementById("directionsItem2"); 
-          const btnSecondItemDirections = document.getElementById("toggleDirectionsItem2");
-       
-          btnSecondItemDirections.onclick = function () {
-            if (targetDivDirectionsSecondItem.style.display !== "none") {
-              targetDivDirectionsSecondItem.style.display = "none";
-            } else {
-              targetDivDirectionsSecondItem.style.display = "block";
-            }
-          };
-       </script>
+          exhibit2();
+        </script>
 
       </div>
 
@@ -93,7 +76,7 @@
       <div id="thirdItem" hidden style="display:none" class="right-move">
       
        <h3>The New Garden Design</h3>
-        <img src="pic6.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic6.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>The new garden design by award-winning landscape designer Todd Longstaffe-Gowan <br>and lighting designer Linnaea Tillett allows for greater engagement between <br>the interior and exterior campus</p>        
         <button id="toggleDirectionsItem3" style="margin-bottom: 21px;"class = "button-27">Click for Directions</button>
@@ -105,71 +88,17 @@
             <li>You will find the exhibit on the left-facing side wall towards the far left side.</li>
           </ol>              
           <h5>Video Directions</h5>
-          <video src="movie6.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie6.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsThirdItem = document.getElementById("directionsItem3"); 
-          const btnThirdItemDirections = document.getElementById("toggleDirectionsItem3");
-       
-          btnThirdItemDirections.onclick = function () {
-            if (targetDivDirectionsThirdItem.style.display !== "none") {
-              targetDivDirectionsThirdItem.style.display = "none";
-            } else {
-              targetDivDirectionsThirdItem.style.display = "block";
-            }
-          };
-       </script>
+          exhibit3();
+        </script>
       
       </div>
 
     
       <script>
-        const targetDivFirstItem = document.getElementById("firstItem");
-        const targetDivThirdItem = document.getElementById("thirdItem");
-        const targetDivSecondItem = document.getElementById("secondItem");
-
-
-        const btnFirstItem = document.getElementById("toggleFirstItem");
-        const btnSecondItem = document.getElementById("toggleSecondItem");
-        const btnThirdItem = document.getElementById("toggleThirdItem");
-
-        btnFirstItem.onclick = function () {
-          if (targetDivFirstItem.style.display !== "none") {
-            targetDivFirstItem.style.display = "none";
-
-
-          } else {
-            targetDivFirstItem.style.display = "block";
-            targetDivSecondItem.style.display = "none";
-            targetDivThirdItem.style.display = "none";
-          }
-        };
-
-        btnSecondItem.onclick = function () {
-          if (targetDivSecondItem.style.display !== "none") {
-            targetDivSecondItem.style.display = "none";
-
-  
-          } else {
-            targetDivSecondItem.style.display = "block";
-            targetDivFirstItem.style.display = "none";
-            targetDivThirdItem.style.display = "none";
-
-          }
-        };        
-        
-        btnThirdItem.onclick = function () {
-          if (targetDivThirdItem.style.display !== "none") {
-            targetDivThirdItem.style.display = "none";
-
-     
-
-          } else {
-            targetDivThirdItem.style.display = "block";
-            targetDivFirstItem.style.display = "none";
-            targetDivSecondItem.style.display = "none";
-          }
-        };
+        createThreeButtons();
       </script>
 
 

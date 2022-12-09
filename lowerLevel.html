@@ -4,6 +4,7 @@
 <head>
   <title>Morgan Library and Museum</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
 </head>
 <body>
   <header>
@@ -28,7 +29,7 @@
       <div id="firstItem" hidden style="display: block" class="right-move">
 
         <h3>The Crusader Bible</h3>
-        <img src="pic7.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic7.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>The Crusader Bible, also known as the Morgan Picture Bible, the Maciejowski Bible, <br>and the Shah 'Abbas Bible, is not only one of the greatest medieval manuscripts in <br>the Morgan, it also ranks as one of the incomparable achievements of French Gothic <br>illumination. <br><br>
           The miniatures represent one of the greatest visualizations of Old Testament events <br>ever made. Some of the stories and their heroes are well known, but there are also <br>accounts of less familiar Israelites who fought for the Promised Land—tales that <br>resonate to this day. There are incredibly violent battle scenes in which the implements <br>of war are so accurately depicted they could be replicated. And there are scenes of <br>everyday life, love, hate, and envy, as well as adultery, rape, and murder—all set in <br>thirteenth-century France.
@@ -43,20 +44,11 @@
             <li>You will find the exhibit on the backwall towards the far right side.</li>
           </ol>              
           <h5>Video Directions</h5>
-          <video src="movie7.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie7.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsFirstItem = document.getElementById("directionsItem1"); 
-          const btnFirstItemDirections = document.getElementById("toggleDirectionsItem1");
-       
-          btnFirstItemDirections.onclick = function () {
-            if (targetDivDirectionsFirstItem.style.display !== "none") {
-              targetDivDirectionsFirstItem.style.display = "none";
-            } else {
-              targetDivDirectionsFirstItem.style.display = "block";
-            }
-          };
-       </script>
+          exhibit1();
+        </script>
 
 
       </div>
@@ -64,7 +56,7 @@
       
       <div id="secondItem" hidden style="display:none" class="right-move">
         <h3>Mozart, Wolfgang Amadeus</h3>
-        <img src="pic8.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic8.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>Mozart, Wolfgang Amadeus, 1756-1791.Austrian composer.<br>Title: Symphony no. 35 in D major, K. 385 : autograph manuscript, 1782 July.</p>
         
@@ -78,20 +70,11 @@
             <li>You will find the exhibit on the right-facing wall towards the middle-left side.</li>
           </ol>                 
           <h5>Video Directions</h5>
-          <video src="movie8.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie8.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsSecondItem = document.getElementById("directionsItem2"); 
-          const btnSecondItemDirections = document.getElementById("toggleDirectionsItem2");
-       
-          btnSecondItemDirections.onclick = function () {
-            if (targetDivDirectionsSecondItem.style.display !== "none") {
-              targetDivDirectionsSecondItem.style.display = "none";
-            } else {
-              targetDivDirectionsSecondItem.style.display = "block";
-            }
-          };
-       </script>
+          exhibit2();
+        </script>
 
       </div>
 
@@ -99,7 +82,7 @@
       <div id="thirdItem" hidden style="display:none" class="right-move">
       
         <h3>Winged Hero</h3>
-        <img src="pic9.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic9.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>Winged hero with scimitar holding reversed bull as he confronts attacking <br>lion.The earlier group (747-752), comprising cylinders for which a <br>Neo-Babylonian classification is suggested, seems to reflect influence <br>of the Middle Assyrian modeled style, while the later group.</p>
         <button id="toggleDirectionsItem3" style="margin-bottom: 21px;" class = "button-27">Click for Directions</button>
@@ -112,72 +95,17 @@
             <li>You will find the exhibit on the left-facing wall towards the middle-right side.</li>
           </ol>        
           <h5>Video Directions</h5>
-          <video src="movie9.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie9.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsThirdItem = document.getElementById("directionsItem3"); 
-          const btnThirdItemDirections = document.getElementById("toggleDirectionsItem3");
-       
-          btnThirdItemDirections.onclick = function () {
-            if (targetDivDirectionsThirdItem.style.display !== "none") {
-              targetDivDirectionsThirdItem.style.display = "none";
-            } else {
-              targetDivDirectionsThirdItem.style.display = "block";
-            }
-          };
-       </script>
-      
+          exhibit3();
+        </script>
+
       </div>
 
-    
-      <script>
-        const targetDivFirstItem = document.getElementById("firstItem");
-        const targetDivThirdItem = document.getElementById("thirdItem");
-        const targetDivSecondItem = document.getElementById("secondItem");
-
-
-        const btnFirstItem = document.getElementById("toggleFirstItem");
-        const btnSecondItem = document.getElementById("toggleSecondItem");
-        const btnThirdItem = document.getElementById("toggleThirdItem");
-
-        btnFirstItem.onclick = function () {
-          if (targetDivFirstItem.style.display !== "none") {
-            targetDivFirstItem.style.display = "none";
-
-
-          } else {
-            targetDivFirstItem.style.display = "block";
-            targetDivSecondItem.style.display = "none";
-            targetDivThirdItem.style.display = "none";
-          }
-        };
-
-        btnSecondItem.onclick = function () {
-          if (targetDivSecondItem.style.display !== "none") {
-            targetDivSecondItem.style.display = "none";
-
-  
-          } else {
-            targetDivSecondItem.style.display = "block";
-            targetDivFirstItem.style.display = "none";
-            targetDivThirdItem.style.display = "none";
-
-          }
-        };        
-        
-        btnThirdItem.onclick = function () {
-          if (targetDivThirdItem.style.display !== "none") {
-            targetDivThirdItem.style.display = "none";
-
-     
-
-          } else {
-            targetDivThirdItem.style.display = "block";
-            targetDivFirstItem.style.display = "none";
-            targetDivSecondItem.style.display = "none";
-          }
-        };
-      </script>
+        <script>
+          createThreeButtons();
+        </script>
 
 
 

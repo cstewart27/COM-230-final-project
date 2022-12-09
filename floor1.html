@@ -4,6 +4,7 @@
 <head>
   <title>Morgan Library and Museum</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
 </head>
 <body>
   <header>
@@ -28,7 +29,7 @@
       <div id="firstItem" hidden style="display: block" class="right-move">
 
         <h3>The Madonna</h3>
-        <img src="pic1.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic1.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>Over the door opposite the library's grand entrance, a ceramic relief by the Renaissance <br>sculptor Luca della Robbia (1400–1482) depicts the madonna and child framed by the Latin <br> motto Soli deo honor et gloria (Glory and honor to God alone).</p>        
         <button id="toggleDirectionsItem1" style="margin-bottom: 21px;" class = "button-27">Click for Directions</button>
@@ -37,25 +38,18 @@
           <h4>Directions</h4>
           <ol>
             <li>Facing Mr. Morgan's Study, walk towards the staircase.</li>
-            <li>After walking up the staircase turn right in the hallway betweek Rotunda and  Mr. Morgan's Study.</li>
+            <li>After walking up the staircase turn right in the hallway between Rotunda and  Mr. Morgan's Study.</li>
             <li>Facing Rotunda walk striaght through Rotunda and into Mr. Morgan's Library.</li>
             <li>You will find the exhibit in Mr. Morgan's Library</li>
           </ol>          
           <h5>Video Directions</h5>
-          <video src="movie1.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie1.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsFirstItem = document.getElementById("directionsItem1"); 
-          const btnFirstItemDirections = document.getElementById("toggleDirectionsItem1");
-       
-          btnFirstItemDirections.onclick = function () {
-            if (targetDivDirectionsFirstItem.style.display !== "none") {
-              targetDivDirectionsFirstItem.style.display = "none";
-            } else {
-              targetDivDirectionsFirstItem.style.display = "block";
-            }
-          };
-       </script>
+          exhibit1();
+        </script>
+  
+
 
 
       </div>
@@ -63,7 +57,7 @@
       
       <div id="secondItem" hidden style="display:none" class="right-move">
         <h3>Sculptor by Shahzia Sikander</h3>
-        <img src="pic2.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic2.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>Shahzia Sikander: Extraordinary realities</p>        
         <button id="toggleDirectionsItem2" style="margin-bottom: 21px;" class = "button-27">Click for Directions</button>
@@ -76,20 +70,13 @@
             <li>You will find the exhibit in Clare, Eddy, Thaw Gallery</li>
           </ol>             
           <h5>Video Directions</h5>
-          <video src="movie2.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie2.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
         <script>
-          const targetDivDirectionsSecondItem = document.getElementById("directionsItem2"); 
-          const btnSecondItemDirections = document.getElementById("toggleDirectionsItem2");
-       
-          btnSecondItemDirections.onclick = function () {
-            if (targetDivDirectionsSecondItem.style.display !== "none") {
-              targetDivDirectionsSecondItem.style.display = "none";
-            } else {
-              targetDivDirectionsSecondItem.style.display = "block";
-            }
-          };
-       </script>
+          exhibit2();
+        </script>
+  
+
 
       </div>
 
@@ -97,7 +84,7 @@
       <div id="thirdItem" hidden style="display:none" class="right-move">
       
        <h3>The Ceiling Paintings by H. Siddons Mowbray </h3>
-        <img src="pic3.png" style="width: 500px; height: auto;"> <br>
+        <img src="/assets/exhibitImages/pic3.png" style="width: 500px; height: auto;"> <br>
         <h4>Exhibit Description/Subtitle</h4>
         <p>The ceiling paintings, by American artist H. Siddons Mowbray (1858–1928), depicts three <br>of the major literary epochs represented in Pierpont Morgan's collections—the ancient <br>world, the Middle Ages, and the Renaissance. The apse, decorated with blue and white <br>stucco reliefs of classical and mythological subjects, is based upon Raphael's design for <br>the Villa Madama in Rome. Mowbray modeled the reliefs on site to ensure they would be <br>lighted effectively by the central oculus, or skylight. 
 
@@ -111,74 +98,21 @@
             <li>After turning right you can walk straight forward past the Clare, Eddy, Thaw Gallery</li>
             <li>Once you reach the end of the hallway, make a left and enter Marble Hall.</li>
             <li>Once you've reached the Marble Hall, walk inside Morgan Stanley Gallery East.</li>
-            <li>You will find the exhibit in Morgan Stanley Gallery Easy.</li>
+            <li>You will find the exhibit in Morgan Stanley Gallery East.</li>
           </ol>
           <h5>Video Directions</h5>
-          <video src="movie3.mov" controls="false" loop autoplay class="video-edit"></video>
+          <video src="/assets/videoDirections/movie3.mov" controls="false" loop autoplay class="video-edit"></video>
         </div>
-        <script>
-          const targetDivDirectionsThirdItem = document.getElementById("directionsItem3"); 
-          const btnThirdItemDirections = document.getElementById("toggleDirectionsItem3");
-       
-          btnThirdItemDirections.onclick = function () {
-            if (targetDivDirectionsThirdItem.style.display !== "none") {
-              targetDivDirectionsThirdItem.style.display = "none";
-            } else {
-              targetDivDirectionsThirdItem.style.display = "block";
-            }
-          };
-       </script>
+      <script>
+        exhibit3();
+      </script>
+
       
       </div>
 
     
       <script>
-        const targetDivFirstItem = document.getElementById("firstItem");
-        const targetDivThirdItem = document.getElementById("thirdItem");
-        const targetDivSecondItem = document.getElementById("secondItem");
-
-
-        const btnFirstItem = document.getElementById("toggleFirstItem");
-        const btnSecondItem = document.getElementById("toggleSecondItem");
-        const btnThirdItem = document.getElementById("toggleThirdItem");
-
-        btnFirstItem.onclick = function () {
-          if (targetDivFirstItem.style.display !== "none") {
-            targetDivFirstItem.style.display = "none";
-
-
-          } else {
-            targetDivFirstItem.style.display = "block";
-            targetDivSecondItem.style.display = "none";
-            targetDivThirdItem.style.display = "none";
-          }
-        };
-
-        btnSecondItem.onclick = function () {
-          if (targetDivSecondItem.style.display !== "none") {
-            targetDivSecondItem.style.display = "none";
-
-  
-          } else {
-            targetDivSecondItem.style.display = "block";
-            targetDivFirstItem.style.display = "none";
-            targetDivThirdItem.style.display = "none";
-
-          }
-        };        
-        
-        btnThirdItem.onclick = function () {
-          if (targetDivThirdItem.style.display !== "none") {
-            targetDivThirdItem.style.display = "none";
-
-     
-
-          } else {
-            targetDivThirdItem.style.display = "block";
-            targetDivFirstItem.style.display = "none";
-            targetDivSecondItem.style.display = "none";
-          }
-        };
+        createThreeButtons();
       </script>
 
 
