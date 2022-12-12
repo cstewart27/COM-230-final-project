@@ -70,7 +70,6 @@ body {
   .video-edit{
     width: 500px;
     height: auto;
-    pointer-events: none;
     padding: 10px;
     background-color: #333;
   }
